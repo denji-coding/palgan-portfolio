@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivien Kate Palgan – Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ================================================================== -->
+  <!-- BACKGROUND EFFECTS                                                 -->
+  <!-- ================================================================== -->
+  <div id="aurora-bg" aria-hidden="true">
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+    <div class="aurora-blob"></div>
+  </div>  
+
+  <div class="light-beam" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ================================================================== -->
+  <!-- PAGE CONTENT                                                       -->
+  <!-- ================================================================== -->
+  <div class="content">
+
+    <!-- Navigation -->
+    <header>
+      <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-logo">VK.dev</div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" onclick="toggleNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- HERO                                                           -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="home">
+        <div class="hero-inner">
+
+          <div class="hero-left fade-up">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">
+              <span>Vivien Kate<br>Razonable Palgan</span>
+            </h1>
+            <p class="hero-title">
+              <span class="typing-wrapper">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor" aria-hidden="true"></span>
+              </span>
+            </p>
+            <p class="hero-desc">
+              Aspiring digital professional passionate about crafting modern, high-performance web experiences and driving impactful online growth. Blending analytical strategy with creative execution.
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn-primary">Explore Projects</a>
+              <a href="#contact" class="btn-outline">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero-right fade-up" style="transition-delay: 0.2s">
+            <div class="profile-container">
+              <div class="profile-ring">
+                <div class="profile-inner">
+                  <div class="profile-avatar">
+                    <img src="assets/images/ID PIC.png" alt="Vivien Kate Palgan" class="profile-initials">
+                  </div>
+                </div>
+              </div>
+              <div class="floating-icons" aria-hidden="true">
+                <div class="ficon">🎨</div>
+                <div class="ficon">⚡</div>
+                <div class="ficon">🛠️</div>
+                <div class="ficon">📱</div>
+                <div class="ficon">💻</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- ABOUT                                                          -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="about">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">Get to know me</p>
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <article class="glass about-card fade-up">
+            <div class="about-grid">
+
+              <div class="about-text">
+                <p>I am a BS Information Systems student with a deep passion for digital optimization, functional design, and building scalable digital strategies. I thrive at the intersection of creative marketing and technical logic.</p>
+                <p>My journey in the tech and digital space started with curiosity and has evolved into a committed pursuit of growth. I enjoy turning complex operational challenges into streamlined, automated workflows and compelling campaigns that deliver real value.</p>
+                <p>When I'm not working on digital assets, I'm exploring new automation frameworks, contributing to academic milestones, and honing my strategic marketing skills.</p>
+
+                <div class="about-quickfacts">
+                  <h4>Quick Facts</h4>
+                  <div class="fact-item">
+                    <span class="fact-icon">📍</span>
+                    <div>
+                      <div class="fact-label">Location</div>
+                      <div class="fact-value">Northern Plain Subd., New Visayas, Panabo City</div>
+                    </div>
+                  </div>
+                  <div class="fact-item">
+                    <span class="fact-icon">🎓</span>
+                    <div>
+                      <div class="fact-label">Degree</div>
+                      <div class="fact-value">BS Information Systems</div>
+                    </div>
+                  </div>
+                  <div class="fact-item">
+                    <span class="fact-icon">✉️</span>
+                    <div>
+                      <div class="fact-label">Email</div>
+                      <div class="fact-value">palganvivienkate@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="fact-item">
+                    <span class="fact-icon">📅</span>
+                    <div>
+                      <div class="fact-label">Status</div>
+                      <div class="fact-value">Graduating Student</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <div class="stat-number">10+</div>
+                  <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">2+</div>
+                  <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">4+</div>
+                  <div class="stat-label">Academic Awards</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">2+</div>
+                  <div class="stat-label">Work Experiences</div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- EDUCATION                                                      -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="education">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">Academic Journey</p>
+            <h2 class="section-title">My <span>Education</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <div class="timeline fade-up">
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="glass edu-card">
+                <h3 class="edu-degree">Bachelor of Science in Information Systems</h3>
+                <p class="edu-school">Davao Del Norte State College</p>
+                <span class="edu-years">2022 – Present</span>
+                <p class="edu-desc">Focused on software development, database systems, UI/UX design, and information management. Currently a graduating student with honors recognition.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="glass edu-card">
+                <h3 class="edu-degree">Senior High School – Humanities and Social Sciences</h3>
+                <p class="edu-school">North Davao Colleges, Inc.</p>
+                <span class="edu-years">2019 – 2021</span>
+                <p class="edu-desc">Completed the HUMSS strand, developing foundational skills in critical thinking, communication, and social analysis.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="glass edu-card">
+                <h3 class="edu-degree">Junior High School</h3>
+                <p class="edu-school">Panabo City National High School</p>
+                <span class="edu-years">2015 – 2019</span>
+                <p class="edu-desc">Completed junior high school education with consistent academic engagement and extracurricular involvement.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- SKILLS                                                         -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="skills">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">What I Work With</p>
+            <h2 class="section-title">Skills &amp; <span>Expertise</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+            <button class="skill-tab active" type="button" onclick="filterSkills('all', this)">All</button>
+            <button class="skill-tab" type="button" onclick="filterSkills('marketing', this)">Digital Marketing</button>
+            <button class="skill-tab" type="button" onclick="filterSkills('automation', this)">Automation &amp; Ops</button>
+            <button class="skill-tab" type="button" onclick="filterSkills('design', this)">Design &amp; Tech</button>
+          </div>
+
+          <div class="skills-columns fade-up" id="skillsGrid">
+
+            <!-- Digital Marketing -->
+            <div class="skill-bar-item" data-cat="marketing">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">📱</span> Social Media Management</span>
+                <span class="skill-bar-pct">90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="marketing">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">📊</span> Content Strategy</span>
+                <span class="skill-bar-pct">85%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="marketing">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">📣</span> Organic Campaign Strategy</span>
+                <span class="skill-bar-pct">82%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="marketing">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">📅</span> Content Scheduling</span>
+                <span class="skill-bar-pct">88%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
+            </div>
+
+            <!-- Automation & Ops -->
+            <div class="skill-bar-item" data-cat="automation">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">⚡</span> Zappify.io / Zapier</span>
+                <span class="skill-bar-pct">80%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="automation">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">✅</span> ClickUp</span>
+                <span class="skill-bar-pct">85%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="automation">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">🔄</span> Workflow Automation</span>
+                <span class="skill-bar-pct">78%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="78"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="automation">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">🗂️</span> Project Management</span>
+                <span class="skill-bar-pct">83%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="83"></div></div>
+            </div>
+
+            <!-- Design & Tech -->
+            <div class="skill-bar-item" data-cat="design">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">🎨</span> Canva</span>
+                <span class="skill-bar-pct">92%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="design">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">🖼️</span> Asset Design</span>
+                <span class="skill-bar-pct">87%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="87"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="design">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">🐍</span> Python Essentials</span>
+                <span class="skill-bar-pct">65%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div>
+            </div>
+            <div class="skill-bar-item" data-cat="design">
+              <div class="skill-bar-header">
+                <span class="skill-bar-name"><span class="skill-bar-icon">💡</span> Brand Consistency</span>
+                <span class="skill-bar-pct">86%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="86"></div></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- ACHIEVEMENTS                                                   -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="achievements">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">Honors &amp; Recognition</p>
+            <h2 class="section-title">Certifications &amp; <span>Achievements</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <div class="achieve-grid fade-up">
+
+            <!-- Academic & Institutional -->
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <img src="assets/images/Lead System Designer.jpg" alt="Certificate">
+              </label>
+              <span class="achieve-emoji">🏆</span>
+              <p class="achieve-category">Academic &amp; Institutional</p>
+              <h3 class="achieve-title">Certificate of Recognition – Lead System Designer</h3>
+              <p class="achieve-issuer">Davao del Norte State College</p>
+              <time class="achieve-date">July 6, 2025</time>
+              <p class="achieve-desc">Recognized for outstanding creative and technical expertise as the designated System Designer for Capstone Project 1.</p>
+            </article>
+
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🎖️</span>
+              <p class="achieve-category">Academic &amp; Institutional</p>
+              <h3 class="achieve-title">Certificate of Recognition – Design Excellence Award</h3>
+              <p class="achieve-issuer">BSIS 3C Academic Block, DNSC</p>
+              <time class="achieve-date">July 6, 2025</time>
+              <p class="achieve-desc">Conferred in recognition of exceptional creative contributions, visual design execution, and aesthetic achievements.</p>
+            </article>
+
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">💪</span>
+              <p class="achieve-category">Academic &amp; Institutional</p>
+              <h3 class="achieve-title">Certificate of Recognition – Academic Perseverance &amp; Resilience</h3>
+              <p class="achieve-issuer">DNSC – BSIS Program</p>
+              <time class="achieve-date">July 6, 2025</time>
+              <p class="achieve-desc">Honored for successfully completing the 3rd Year, 2nd Semester while demonstrating outstanding determination and resilience.</p>
+            </article>
+
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🥈</span>
+              <p class="achieve-category">Academic &amp; Institutional</p>
+              <h3 class="achieve-title">Academic Honor – 2nd Honor</h3>
+              <p class="achieve-issuer">Davao del Norte State College – Office of the Registrar</p>
+              <time class="achieve-date">1st Semester, AY 2024–2025</time>
+              <p class="achieve-desc">Achieved prominent academic standing on the institutional honors list for the BS Information Systems program.</p>
+            </article>
+
+            <!-- Capstone & Tech -->
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🚀</span>
+              <p class="achieve-category">Capstone &amp; Tech</p>
+              <h3 class="achieve-title">Certificate of Participation – Start-Up Sundayag Pitching Competition</h3>
+              <p class="achieve-issuer">DNSC Institute of Computing</p>
+              <time class="achieve-date">June 2, 2026</time>
+              <p class="achieve-desc">Recognized for entrepreneurial innovation and presentation skills pitching the H2GO platform at the 2026 Start-Up Sundayag event.</p>
+            </article>
+
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🎓</span>
+              <p class="achieve-category">Capstone &amp; Tech</p>
+              <h3 class="achieve-title">Certificate of Completion – Capstone Project Implementation</h3>
+              <p class="achieve-issuer">DNSC</p>
+              <time class="achieve-date">February 28 – April 11, 2026</time>
+              <p class="achieve-desc">Successfully implemented the H2GO: Web-Based Water Ordering and Delivery System for San Vicente Panabo Water Refill.</p>
+            </article>
+
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🐍</span>
+              <p class="achieve-category">Capstone &amp; Tech</p>
+              <h3 class="achieve-title">Certificate of Course Completion – Python Essentials 1</h3>
+              <p class="achieve-issuer">Cisco Networking Academy / DICT-ITU DTC Initiative</p>
+              <time class="achieve-date">November 6, 2025</time>
+              <p class="achieve-desc">Completed core industry-standard programming coursework validating foundational Python skills and data handling functions.</p>
+            </article>
+
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">⚙️</span>
+              <p class="achieve-category">Capstone &amp; Tech</p>
+              <h3 class="achieve-title">Credential Badge – Foundations of Business Automation</h3>
+              <p class="achieve-issuer">Zapier Academy</p>
+              <time class="achieve-date">2025</time>
+              <p class="achieve-desc">Certifies technical expertise in connecting applications, designing multi-step automated workflows, and eliminating repetitive tasks.</p>
+            </article>
+
+            <!-- Multimedia -->
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🎬</span>
+              <p class="achieve-category">Multimedia &amp; Creative Arts</p>
+              <h3 class="achieve-title">Certificate of Recognition – Best Romantic Film ("Altruistic Love")</h3>
+              <p class="achieve-issuer">DNSC Institute of Computing</p>
+              <time class="achieve-date">December 22, 2022</time>
+              <p class="achieve-desc">Awarded top honors for creative storytelling and exceptional multimedia execution at Pag-hiusa sa Lente Multimedia Festival 2022.</p>
+            </article>
+
+            <!-- Public Service -->
+            <article class="glass achieve-card">
+              <label class="achieve-img-holder" title="Click to upload certificate image">
+                <input type="file" class="img-upload-input" accept="image/*" onchange="loadCertImg(this)">
+                <img alt="Certificate">
+                <div class="img-placeholder">
+                  <span class="img-upload-icon">🖼️</span>
+                  <span class="img-upload-label">Click to upload<br>certificate image</span>
+                </div>
+              </label>
+              <span class="achieve-emoji">🌱</span>
+              <p class="achieve-category">Public Service &amp; Sustainability</p>
+              <h3 class="achieve-title">Certificate of Commendation – Narra Tree Planting Certificate</h3>
+              <p class="achieve-issuer">GCash &amp; One Tree Planted</p>
+              <time class="achieve-date">April 6, 2026</time>
+              <p class="achieve-desc">Certified environmental sustainability milestone for funding the reforestation of Philippine forests with a Narra tree planted in Palawan.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- PROJECTS                                                       -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="projects">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">What I've Built</p>
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <div class="projects-grid fade-up">
+
+            <article class="glass project-card">
+              <div class="project-preview">
+                <div class="project-preview-glow"></div>
+                <span class="project-preview-icon" aria-hidden="true">💧</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-name">H2GO: Web-Based Water Ordering &amp; Delivery System</h3>
+                <p class="project-role">System Analyst</p>
+                <p class="project-desc">Developed a streamlined, web-based logistics and order management platform tailored for local water refilling stations. Features an intuitive consumer ordering interface and an administrative backend for real-time delivery tracking and operational performance evaluation.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Web Development</span>
+                  <span class="tech-tag">System Design</span>
+                  <span class="tech-tag">Database</span>
+                  <span class="tech-tag">UI/UX</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link github">⭐ GitHub</a>
+                  <a href="#" class="project-link demo">🚀 Live Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass project-card">
+              <div class="project-preview">
+                <div class="project-preview-glow" style="background: radial-gradient(circle, rgba(184,77,255,0.2) 0%, transparent 70%)"></div>
+                <span class="project-preview-icon" aria-hidden="true">⚡</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-name">Vivien-Tech Automation System</h3>
+                <p class="project-role">Digital Marketing &amp; Automation Lead</p>
+                <p class="project-desc">Built and deployed an extensive, multi-day digital content asset system designed to scale brand visibility. Structured automated posting pipelines and optimized asset workflows to maintain brand consistency across distributed client channels including Apehx.com and Propulse VA.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Canva</span>
+                  <span class="tech-tag">ClickUp</span>
+                  <span class="tech-tag">Zappify.io</span>
+                  <span class="tech-tag">Facebook/Instagram</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link github">⭐ GitHub</a>
+                  <a href="#" class="project-link demo">🚀 View Case</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- EXPERIENCE                                                     -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="experience">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">Work History</p>
+            <h2 class="section-title">Work <span>Experience</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <div class="fade-up">
+            <article class="glass exp-item">
+              <div class="exp-header">
+                <h3 class="exp-role">Digital Marketing and Automation Intern</h3>
+                <time class="exp-period">Feb 2026 – May 2026</time>
+              </div>
+              <p class="exp-company">Propulse VA</p>
+              <ul class="exp-duties">
+                <li>Spearheaded the creation and management of multi-day content matrices and automated campaign templates across diverse business niches.</li>
+                <li>Utilized Canva to manage, build, and migrate collaborative team design assets seamlessly.</li>
+                <li>Tracked operational milestones and managed bulk social media distributions utilizing tools like ClickUp and Zappify.</li>
+              </ul>
+            </article>
+
+            <article class="glass exp-item">
+              <div class="exp-header">
+                <h3 class="exp-role">Office Assistant – Cash for Work</h3>
+                <time class="exp-period">2025</time>
+              </div>
+              <p class="exp-company">Office of the Curriculum and Instruction Division (DNSC)</p>
+              <ul class="exp-duties">
+                <li>Provided critical administrative and operational support, streamlining day-to-day document workflows and managing student and institutional data records.</li>
+                <li>Assisted in the organization and coordination of academic and curriculum-related materials while maintaining high confidentiality and systematic data management.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- CONTACT                                                        -->
+      <!-- -------------------------------------------------------------- -->
+      <section id="contact">
+        <div class="section-inner">
+          <header class="section-header">
+            <p class="section-eyebrow">Let's Connect</p>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="section-divider"></div>
+          </header>
+
+          <div class="contact-grid fade-up">
+
+            <div class="contact-info">
+              <h3 class="contact-info-title">Let's create something impactful together!</h3>
+              <p class="contact-info-desc">Whether you have an upcoming campaign to launch, an automation pipeline to build, or just want to connect — my inbox is always open.</p>
+
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div class="contact-item-icon" aria-hidden="true">✉️</div>
+                  <div>
+                    <div class="contact-item-label">Email</div>
+                    <div class="contact-item-value">palganvivienkate@gmail.com</div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-item-icon" aria-hidden="true">📍</div>
+                  <div>
+                    <div class="contact-item-label">Location</div>
+                    <div class="contact-item-value">Northern Plain Subd., New Visayas, Panabo City</div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-item-icon" aria-hidden="true">🎓</div>
+                  <div>
+                    <div class="contact-item-label">College</div>
+                    <div class="contact-item-value">Davao del Norte State College</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href="#" class="social-link" title="Instagram">📸</a>
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Facebook">👥</a>
+              </div>
+            </div>
+
+            <form class="glass contact-form-card" onsubmit="event.preventDefault()">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="your@email.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="What's this about?">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button type="submit" class="btn-submit">✨ Send Message</button>
+            </form>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-logo">Vivien Kate Palgan</div>
+      <div class="footer-socials">
+        <a href="#" class="social-link" title="Instagram">📸</a>
+        <a href="#" class="social-link" title="LinkedIn">💼</a>
+        <a href="#" class="social-link" title="Facebook">👥</a>
+      </div>
+      <p class="footer-copy">© 2026 <span>Vivien Kate Palgan</span>. Designed with Creativity &amp; Technology.</p>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#home" id="back-top" aria-label="Back to top">↑</a>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
