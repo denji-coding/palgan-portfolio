@@ -33,6 +33,22 @@
   ::-webkit-scrollbar-track { background: var(--bg-2); }
   ::-webkit-scrollbar-thumb { background: var(--indigo); border-radius: 3px; }
 
+  /* ======================== BOOTSTRAP ICONS ======================== */
+  .bi { line-height: 1; vertical-align: -0.125em; }
+  .ficon .bi { font-size: 1.2rem; color: var(--violet); }
+  .fact-icon .bi { font-size: 1rem; color: var(--violet); }
+  .skill-bar-icon .bi { font-size: 1rem; color: var(--violet); }
+  .achieve-emoji .bi { font-size: 1.75rem; color: var(--violet); }
+  .project-preview-icon .bi { font-size: 4rem; opacity: 0.4; color: var(--indigo); }
+  .contact-item-icon .bi { font-size: 1.1rem; color: var(--violet); }
+  .social-link .bi { font-size: 1.2rem; color: var(--text-silver); }
+  .social-link:hover .bi { color: var(--text-main); }
+  #back-top .bi { font-size: 1.25rem; color: white; }
+  .btn-submit { display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .project-link { display: inline-flex; align-items: center; gap: 6px; }
+  .cert-lightbox-close { display: flex; align-items: center; justify-content: center; }
+  .cert-lightbox-close .bi { font-size: 1.1rem; }
+
   /* ======================== AURORA BACKGROUND ======================== */
   #aurora-bg {
     position: fixed;
@@ -284,7 +300,6 @@
     border: 1px solid rgba(91,91,255,0.4);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem;
     animation: floatIcon 4s ease-in-out infinite;
     box-shadow: 0 0 12px rgba(91,91,255,0.2);
     backdrop-filter: blur(10px);
@@ -499,40 +514,63 @@
   /* Certificate image holder */
   .achieve-img-holder {
     width: 100%; height: 150px;
+    padding: 0;
+    font: inherit;
+    color: inherit;
     border-radius: 10px;
     background: rgba(8, 11, 20, 0.7);
-    border: 2px dashed rgba(91,91,255,0.3);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 8px;
+    border: 1px solid rgba(91,91,255,0.25);
+    display: block;
     margin-bottom: 18px;
     position: relative; overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s;
+    cursor: zoom-in;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
-  .achieve-img-holder:hover { border-color: rgba(184,77,255,0.6); background: rgba(15,23,42,0.8); }
-  .achieve-img-holder:hover .img-upload-icon { color: var(--violet); }
+  .achieve-img-holder:hover {
+    border-color: rgba(184,77,255,0.6);
+    box-shadow: 0 0 20px rgba(184,77,255,0.15);
+    transform: scale(1.01);
+  }
   .achieve-img-holder img {
     width: 100%; height: 100%; object-fit: cover; border-radius: 8px;
-    display: none;
-  }
-  .achieve-img-holder img.loaded { display: block; }
-  .achieve-img-holder .img-placeholder {
-    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    display: block;
     pointer-events: none;
   }
-  .achieve-img-holder.has-img .img-placeholder { display: none; }
-  .img-upload-icon { font-size: 1.8rem; color: rgba(91,91,255,0.5); transition: color 0.3s; }
-  .img-upload-label { font-size: 0.72rem; color: var(--text-sub); text-align: center; line-height: 1.4; }
-  .img-upload-input { display: none; }
-  /* Rainbow shimmer on empty holder */
-  .achieve-img-holder::after {
-    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(91,91,255,0.04), transparent);
-    animation: holderShimmer 3s ease-in-out infinite;
-  }
-  @keyframes holderShimmer { 0%,100% { left: -100%; } 50% { left: 100%; } }
 
-  .achieve-emoji { font-size: 2rem; margin-bottom: 14px; display: block; }
+  /* Certificate lightbox */
+  .cert-lightbox {
+    position: fixed; inset: 0; z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    background: rgba(4, 7, 15, 0.92);
+    backdrop-filter: blur(8px);
+    cursor: zoom-out;
+  }
+  .cert-lightbox[hidden] { display: none; }
+  .cert-lightbox img {
+    max-width: min(92vw, 900px);
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    cursor: default;
+  }
+  .cert-lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    width: 44px; height: 44px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    background: rgba(15,23,42,0.8);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .cert-lightbox-close:hover {
+    background: rgba(184,77,255,0.25);
+    border-color: rgba(184,77,255,0.5);
+  }
+
+  .achieve-emoji { margin-bottom: 14px; display: block; }
   .achieve-category {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem; color: var(--violet);
@@ -555,7 +593,7 @@
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
   }
-  .project-preview-icon { font-size: 4rem; opacity: 0.4; }
+  .project-preview-icon { display: flex; align-items: center; justify-content: center; }
   .project-preview-glow {
     position: absolute; top: 50%; left: 50%;
     width: 200px; height: 200px;
@@ -601,7 +639,7 @@
   .exp-company { font-size: 0.9rem; color: var(--blue); margin-bottom: 14px; font-weight: 500; }
   .exp-duties { list-style: none; }
   .exp-duties li { font-size: 0.88rem; color: var(--text-sub); line-height: 1.75; margin-bottom: 8px; padding-left: 18px; position: relative; }
-  .exp-duties li::before { content: 'â–¸'; position: absolute; left: 0; color: var(--violet); }
+  .exp-duties li::before { content: '>'; position: absolute; left: 0; color: var(--violet); }
 
   /* ======================== CONTACT ======================== */
   #contact { background: rgba(15, 23, 42, 0.3); }

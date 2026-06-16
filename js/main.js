@@ -143,23 +143,38 @@ const skillsObserver = new IntersectionObserver(
 if (skillsSection) skillsObserver.observe(skillsSection);
 
 /* --------------------------------------------------------------------------
-   Achievement certificate upload
+   Achievement certificate lightbox
    -------------------------------------------------------------------------- */
-function loadCertImg(input) {
-  if (!input.files || !input.files[0]) return;
+const certLightbox = document.getElementById('cert-lightbox');
+const certLightboxImg = document.getElementById('cert-lightbox-img');
 
-  const holder = input.closest('.achieve-img-holder');
+function viewCert(holder) {
   const img = holder.querySelector('img');
-  const reader = new FileReader();
+  if (!img?.src) return;
 
-  reader.onload = (e) => {
-    img.src = e.target.result;
-    img.classList.add('loaded');
-    holder.classList.add('has-img');
-  };
-
-  reader.readAsDataURL(input.files[0]);
+  certLightboxImg.src = img.src;
+  certLightboxImg.alt = img.alt;
+  certLightbox.hidden = false;
+  certLightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 }
+
+function closeCertLightbox() {
+  if (certLightbox.hidden) return;
+
+  certLightbox.hidden = true;
+  certLightbox.setAttribute('aria-hidden', 'true');
+  certLightboxImg.src = '';
+  document.body.style.overflow = '';
+}
+
+certLightbox?.addEventListener('click', (e) => {
+  if (e.target === certLightbox) closeCertLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCertLightbox();
+});
 
 /* --------------------------------------------------------------------------
    Scroll fade-in
