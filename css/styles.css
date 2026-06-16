@@ -108,13 +108,14 @@
     transition: all 0.3s;
   }
   .nav-logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    background: var(--rainbow-grad);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-logo {
+    width: 60px;   /* adjust size */
+    height: 40px;
+    object-fit: contain;
   }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
